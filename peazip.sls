@@ -1,4 +1,5 @@
-{%- load_yaml as versions %}
+{% load_yaml as versions %}
+- 9.9.1
 - 9.3.0
 - 9.2.0
 - 9.1.0
@@ -67,10 +68,10 @@ peazip:
     full_name: 'PeaZip {{ version }}'
     installer: 'https://github.com/peazip/PeaZip/releases/download/{{ version }}/peazip-{{ version }}.WINDOWS.exe'
     {% endif %}
-    install_flags: '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+    install_flags: '/VERYSILENT /SUPPRESSMSGBOXES /LANG=PT-BR /NORESTART /SP-'
     uninstaller: '%ProgramFiles%\PeaZip\unins000.exe'
     uninstall_flags: '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
     msiexec: False
-    locale: en_US
+    locale: PT-BR
     reboot: False
   {% endfor %}
