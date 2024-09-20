@@ -9,7 +9,7 @@
 # Since version 90.0 no version number is added to the full_name field
 # See https://bugzilla.mozilla.org/show_bug.cgi?id=1713393
 
-{%- set lang = salt['config.get']('firefox:pkg:lang', 'en-US') %}
+{%- set lang = salt['config.get']('firefox:pkg:lang', 'pt-BR') %}
 
 {% load_yaml as versions -%}
 # renovate: datasource=custom.firefox depName=firefox packageName=LATEST_FIREFOX_VERSION
